@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+header {
+  background-color: #1f1f1f;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-center,
+.nav-right {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #780C28;
+}
+
+.banner {
+  background: url('https://wallpapercave.com/wp/wp1850440.jpg') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.banner-texto h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.banner-texto p {
+  margin-top: 10rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.banner-texto button {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: #780C28;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.noticias-bar {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #111;
+  color: white;
+  height: 50px;
+  position: relative;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.noticias-fixa {
+  background: #780C28;
+  color: white;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.scrolling-wrapper {
+  flex: 1;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-loop 20s linear infinite;
+}
+
+.scrolling-text span {
+  padding-right: 100px;
+  display: inline-block;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.cards-jogos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.genero-pin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  border-bottom-right-radius: 5px;
+  z-index: 2;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-fundo {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.jogo1 { background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1RLdppgLllgGZlkjuvHBu6/abbcf1e12935e4654a109324955a5087/RED_KEYART_STD_RGB_WW.jpg'); }
+.jogo2 { background-image: url('https://cdn.wccftech.com/wp-content/uploads/2024/08/Monster-Hunter-Wilds-HD-scaled.jpg'); }
+.jogo3 { background-image: url('https://www.agamingnetwork.com/content/images/size/w2000/2025/01/RW1qHu4.jpg'); }
+.jogo4 { background-image: url('https://i0.wp.com/dropsdejogos.uai.com.br/wp-content/uploads/sites/10/2024/06/metroid-scaled.jpg?fit=960%2C531&ssl=1&resize=1280%2C720'); }
+
+.card h2 {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.card p {
+  padding: 0 1rem 1rem 1rem;
+  color: #ccc;
+}
+
+.campeonatos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.campeonato {
+  background-color: #1e1e1e;
+  color: #fff;
+  width: 45%;
+  border: 4px solid #ff0000;
+  border-radius: 0;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.img-campeonato {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img1 {
+  background-image: url('https://img-cdn.hltv.org/gallerypicture/L_hgOXC-OUTPc4SBTA-QXx.jpg?ixlib=java-2.1.0&w=1200&s=9ad1293b2c91c95bb38cc7af642ccc9f'); 
+}
+
+.img2 {
+  background-image: url('https://static.valorantzone.gg/news/2022/09/01121947/52325895002_ab55d4ae1b_k.jpg'); 
+}
+
+.info {
+  padding: 20px;
+}
+
+
+.reviews {
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.review {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nota {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #ff205f;
+  color: #000;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+
+.img-review {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.rev1 { background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202306/3020/1916ec71f4af6c3e583a816988c41d54bafea762e02a39b2.jpg'); }
+.rev2 { background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202210/2000/IgwsFz9BiBrFvyV7pIWpoVgd.png'); }
+.rev3 { background-image: url('https://gameplayscassi.com.br/wp-content/uploads/2024/08/Black-Myth-WuKong.jpg'); }
+.rev4 { background-image: url('https://cdn1.epicgames.com/offer/e9a679451d094c1ba3d008b6a01adec5/EGS_FINALFANTASYVIIREBIRTH_SquareEnix_S1_2560x1440-e254f978084058f898118dc49728d04c'); }
+
+footer {
+  background-color: #111;
+  padding: 3rem 2rem 1rem;
+  color: #ccc;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px;
+  background-color: #111;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.footer-box p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-box img.footer-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.footer-box h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ff0000;
+  padding-bottom: 10px;
+}
+
+.footer-box > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+.footer-box em {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.footer-bar {
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #780C28;
+  text-decoration: none;
+}
+
+.footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #111;
+  font-size: 14px;
+  color: #4a4a4a;
+  flex-wrap: wrap;
+}
+
+.footer-right a {
+  margin-left: 20px;
+  color: #4a4a4a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
